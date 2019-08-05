@@ -8,7 +8,6 @@ extern const uint8_t PROGMEM beacon_sprite[];
 // function definitions
 void update_beacon_step();
 void reset_auto_animation_timer();
-void clear_screen();
 void print_text();
 
 constexpr uint8_t auto_steps_max = 100;
@@ -56,8 +55,6 @@ void setup() {
 
   arduboy.setFrameRate(60);
   arduboy.clear();
-
-  clear_screen();
 }
 
 void loop() {
@@ -94,10 +91,6 @@ void loop() {
     reset_auto_animation_timer ();
     --cursor_x;
   }
-  
-
-  // clear screen before display
-  clear_screen();
 
   print_text();
   

@@ -91,6 +91,10 @@ void loop() {
     reset_auto_animation_timer ();
     --cursor_x;
   }
+  
+
+  // clear screen before display
+  arduboy.clear();
 
   print_text();
   
